@@ -2,6 +2,12 @@
 
 A tool to extract parts of an MBTiles file into separate files using a GeoJSON with polygons (e.g. split world data into countries). 
 
+# Notes
+
+* The geojson file must have a feature collection, even if only a single polygon is being extracted.
+* The function that generates the bounds metadata items is broken and cannot be trusted - verify bounds after extract.
+* The "property name" parameter indicates what property element should be used to create the name of the extract file.
+
 ## Results from mbtiles-extracts
 The `mbtiles-extracts` tool extracts all **tiles** intersecting with the polygons in the GeoJSON. For example:
 
